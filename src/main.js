@@ -6,15 +6,15 @@ import router from './router'
 import NewFile from '@/components/NewFolder/NewFile'
 import Element from 'element-ui'
 
-Vue.component('app-newfile', NewFile);
-Vue.use('element', Element);
+Vue.component('app-newfile', NewFile)
+Vue.use('element', Element)
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-	el: '#app',
-	router,
-	template: '<App/>',
-	components: { App }
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
 })
