@@ -6,8 +6,6 @@
 		</span> -->
 		<!-- <app-newfile></app-newfile> -->
 		<!-- <elem-button @click="MethodToBeCalled">Click this</elem-button>-->
-
-
 	</div>
 </template>
 
@@ -44,7 +42,7 @@ export default {
     };
   },
   methods: {
-    MethodToBeCalled: function() {
+    MethodToBeCalled() {
       alert("This is the employee's name: Rui Santos");
     }
   }
