@@ -72,9 +72,9 @@
 			</el-menu>
 
 			<el-container>
-				<app-header @collapseChanged="isCollapsed = $event">
+				<app-main @collapseChanged="isCollapsed = $event">
 					<!-- Header and Main -->
-				</app-header>
+				</app-main>
 			</el-container>
 		</el-container>
 
@@ -86,12 +86,12 @@ import element from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 
 import NavBar from "./components/NavBar.vue";
-import Header from "./components/Header.vue";
+import Main from "./components/Main.vue";
 
 export default {
   components: {
     // "app-navbar": NavBar,
-    "app-header": Header,
+    "app-main": Main,
     // NavBar
     "el-menu": element.Menu,
     "el-submenu": element.Submenu,
