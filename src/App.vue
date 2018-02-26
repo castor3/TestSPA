@@ -5,8 +5,7 @@
 		<!-- <router-view/> -->
 
 		<el-container>
-			<el-menu style="height:100%" class="el-menu-vertical-demo"
-							@open="handleOpen" @close="handleClose" :collapse="isCollapsed">
+			<el-menu style="height:100%" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapsed">
 				<!-- Main window -->
 				<el-submenu index="1">
 					<template slot="title">
@@ -72,9 +71,7 @@
 			</el-menu>
 
 			<el-container>
-				<app-main @collapseChanged="isCollapsed = $event">
-					<!-- Header and Main -->
-				</app-main>
+				<app-main @collapseChanged="isCollapsed = $event" />
 			</el-container>
 		</el-container>
 

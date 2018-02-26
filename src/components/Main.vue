@@ -7,6 +7,9 @@
 					<el-button @click="toggleIsCollapsed" size="mini" round>Menu</el-button>
 				</el-col>
 			</span>
+			<span id="title">
+					&lt;WebsiteName&gt;
+			</span>
 			<span style="float: right">
 				<el-col>
 					<!-- Right side options -->
@@ -25,7 +28,7 @@
 
 		<!-- Main content -->
 		<el-main>
-			<div id="centerLogin">
+			<div id="centeredLogin">
 				<h1>Login</h1>
 				<el-form>
 					<el-form-item>
@@ -48,7 +51,7 @@ import element from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 
 export default {
-  name: "Header",
+  name: "Main",
   components: {
     // Header
     "el-header": element.Header,
@@ -61,7 +64,7 @@ export default {
     "el-main": element.Main,
     "el-form": element.Form,
     "el-form-item": element.FormItem,
-    "el-input": element.Input,
+		"el-input": element.Input,
 
     "el-button": element.Button
   },
@@ -75,7 +78,8 @@ export default {
   props: ["collapseValue"],
   methods: {
     onSubmit() {
-      console.log("submit!");
+			console.log("submit!");
+			
     },
     toggleIsCollapsed() {
       this.isCollapsed = !this.isCollapsed;
@@ -87,7 +91,7 @@ export default {
 </script>
 
 <style>
-#centerLogin {
+#centeredLogin {
   width: 25%;
   margin: 0 auto;
 }
@@ -104,5 +108,9 @@ export default {
   background-color: #e9eef3;
   color: #333;
   text-align: center;
+}
+#title {
+  font-size: 14px;
+	font-weight: bold;
 }
 </style>
