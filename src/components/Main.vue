@@ -1,5 +1,5 @@
 <template>
-	<div style="width:100%">
+	<div id="main">
 		<!-- Header -->
 		<el-header style="font-size: 12px">
 			<span style="float: left">
@@ -91,6 +91,10 @@ export default {
 </script>
 
 <style>
+#main{
+	width: 100%;
+	/* height: 100%; */
+}
 #centeredLogin {
   width: 25%;
   margin: 0 auto;

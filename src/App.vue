@@ -3,23 +3,19 @@
 		<!-- <img src="./assets/logo.png"> -->
 		<!-- <app-ficheiro></app-ficheiro> -->
 		<!-- <router-view/> -->
-
+		<!--
+	## Dark theme ##
+	background-color="#545c64"
+	text-color="#fff"
+	active-text-color="#ffd04b"
+-->
 		<el-container>
-			<el-menu style="height:100%" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapsed">
+			<el-menu class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapsed">
 				<!-- Main window -->
-				<el-submenu index="1">
-					<template slot="title">
-						<i class="el-icon-message"></i>
-						<span slot="title">Main window</span>
-					</template>
-					<el-menu-item-group title="Group 2">
-						<el-menu-item index="1-1">Option 1</el-menu-item>
-					</el-menu-item-group>
-					<el-submenu index="1-2">
-						<template slot="title">Option2</template>
-						<el-menu-item index="1-4-1">Option 2-1</el-menu-item>
-					</el-submenu>
-				</el-submenu>
+				<el-menu-item index="1">
+					<i class="el-icon-message"></i>
+					<span slot="title">Home</span>
+				</el-menu-item>
 				<!-- Friends -->
 				<el-submenu index="2">
 					<template slot="title">
@@ -39,21 +35,10 @@
 					</el-submenu>
 				</el-submenu>
 				<!-- Fields -->
-				<el-submenu index="3">
-					<template slot="title">
-						<i class="el-icon-location"></i>
-						<span slot="title">Fields</span>
-					</template>
-					<el-menu-item-group>
-						<template slot="title">Group 1</template>
-						<el-menu-item index="3-1">Option 1</el-menu-item>
-						<el-menu-item index="3-2">Option 2</el-menu-item>
-					</el-menu-item-group>
-					<el-submenu index="3-4">
-						<template slot="title">Option 4</template>
-						<el-menu-item index="3-4-1">Option 4-1</el-menu-item>
-					</el-submenu>
-				</el-submenu>
+				<el-menu-item index="3">
+					<i class="el-icon-location"></i>
+					<span slot="title">Fields</span>
+				</el-menu-item>
 				<!-- Profile -->
 				<el-submenu index="4">
 					<template slot="title">
@@ -70,9 +55,7 @@
 				</el-submenu>
 			</el-menu>
 
-			<el-container>
-				<app-main @collapseChanged="isCollapsed = $event" />
-			</el-container>
+			<app-main @collapseChanged="isCollapsed = $event" />
 		</el-container>
 
 	</div>
@@ -125,15 +108,10 @@ body {
   text-align: center;
   color: #2c3e50;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
-  min-height: 400px;
-}
-.el-menu-item {
-  text-align: left;
+  /* min-height: 400px; */
+  height: 100%;
+  border-width: 0px;
 }
 </style>
